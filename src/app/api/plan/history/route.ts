@@ -1,6 +1,8 @@
 import { createServerSupabase } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   const supabase = createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();

@@ -2,6 +2,8 @@ import { createServerSupabase } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 import { classifyIntent, extractUpdates, buildCoachResponse } from '@/lib/engines/coach';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: Request) {
   const supabase = createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();
