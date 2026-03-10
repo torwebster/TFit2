@@ -1,6 +1,8 @@
 import { createServerSupabase } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 import { buildDailyPlan } from '@/lib/engines/engine';
+
+export const dynamic = 'force-dynamic';
 import { todayISO } from '@/lib/utils';
 import type { EngineContext, Injury, RecentWorkout, RecentSymptom, NutritionSummary } from '@/types';
 
